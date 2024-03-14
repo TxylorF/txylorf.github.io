@@ -1,0 +1,60 @@
+body {
+    font-family: sans-serif;
+    background-color: #222222;
+    color: #ff5d5d;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+a {
+    color: #aaaaff;
+}
+hr {
+   border: 0;
+   color: #111111;
+   background-color: #111111;
+   height: 2px;
+   margin-top: 16px;
+}
+h3 {
+    color: #ffffff;
+    font-size: 16px;
+}
+img {
+    border:0;
+    margin:0;
+}
+.sidebar {
+    padding: 10px;
+    vertical-align: top;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+ }
+ 
+.alert {
+    background-color:#aa0000;
+    color:#ffffff;
+    font-weight:bold;
+    padding: 6px 10px;
+    width:500px;
+}
+
+/* Webkit browsers */
+::-webkit-scrollbar {
+    width: 10px; /* width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #262626; /* color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ff6969; /* color of the scrollbar handle */
+    border-radius: 5px; /* roundness of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ff5353; /* color of the scrollbar handle on hover */
+}
+
