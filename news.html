@@ -8,13 +8,22 @@
 </head>
 <style>
   body {
-    margin: 0;
-    padding: 0;
-    background-image: url('https://i.imgur.com/6kpvlca.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      animation: crossfade 15s infinite;
+  }
+
+  @keyframes crossfade {
+      0%, 100% {
+          background-image: url('https://i.imgur.com/6kpvlca.png');
+      }
+      50% {
+          background-image: url('https://i.ibb.co/GHrhZPN/CENEWSBG2.png');
+      }
   }
 </style>
 <body>
@@ -47,15 +56,6 @@
               </ul>
               <p>We’ll keep you posted.<br />- The Complete Team</p>
               <p>Check out <a href="https://discord.gg/complete-edition">the discord</a>!</p>                  
-            </div>
-            <hr>
-            <div id="posts">
-              <h3><a href='#'>Version 16 Released now! lalalala</a></h3>
-              <p>Version 16 is now fully available to use</p>
-              <p>Changelog:</p>
-              <ul>
-                <p>* This is an updated feature</p>
-              </ul>
             </div>
             <hr>
             <div id="posts">
