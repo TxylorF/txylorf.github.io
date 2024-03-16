@@ -93,16 +93,30 @@
         </td>
         <td class="sidebar" width="180px" valign="top">
           <h2>Official links:</h2>
-          <a href="https://patreon.com/user?u=120921999">Patreon</a><br>
-          <a href="https://twitter.com/F13_CE">X/Twitter</a><br>
-          <a href="https://www.youtube.com/channel/UC0V-WwCXJbvbtEfqAFtWEsw">YouTube</a><br>
+          <a href="https://patreon.com/user?u=120921999" target="_blank">Patreon</a><br>
+          <a href="https://twitter.com/F13_CE" target="_blank">X/Twitter</a><br>
+          <a href="https://www.youtube.com/channel/UC0V-WwCXJbvbtEfqAFtWEsw" target="_blank">YouTube</a><br>
           <h2>Community links:</h2>
-          <a href="https://discord.gg/the-ultimate-friday-1062480837473488926">Ultimate Friday Discord</a><br>
+          <a href="https://discord.gg/the-ultimate-friday-1062480837473488926" target="_blank">Ultimate Friday Discord</a><br>
           <h2>Get Complete Edition:</h2>
-          <a href="https://cdn.f13mods.org/ce/latest"><img src="https://i.ibb.co/YhP8QdJ/CE-DOWNLOAD.png" border="0" style="width: 144px;"></a>
-        </td>
+          <a href="https://cdn.f13mods.org/ce/latest" target="_blank"><img src="https://i.ibb.co/YhP8QdJ/CE-DOWNLOAD.png" border="0" style="width: 144px;"></a>
+        </td>        
       </tr>
     </tbody>
   </table>
+  <script>
+      const { ipcRenderer } = require('electron');
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const links = document.querySelectorAll('a[target="_blank"]');
+
+        links.forEach(link => {
+          link.addEventListener('click', (event) => {
+            event.preventDefault();
+            ipcRenderer.send('open-external-link', link.href);
+          });
+        });
+      });
+  </script>
 </body>
 </html>
